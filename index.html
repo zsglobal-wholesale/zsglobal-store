@@ -3,75 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZS GLOBAL FZE - Official Wholesale Store</title>
+    <title>ZS GLOBAL FZE - Official Store</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; }
-        header { background: #1b5e20; color: white; padding: 30px 10px; text-align: center; }
-        .hero { background: #2e7d32; color: white; padding: 20px; text-align: center; margin-bottom: 20px; }
-        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
-        .card { background: white; width: 300px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; transition: 0.3s; text-align: center; }
-        .card:hover { transform: translateY(-5px); }
-        .card-header { background: #1b5e20; color: white; padding: 40px 10px; font-size: 50px; }
-        .card-content { padding: 20px; }
-        .card h3 { margin: 10px 0; color: #333; }
-        .card p { color: #666; font-size: 0.9em; line-height: 1.4; height: 60px; }
-        .btn-wa { background: #25d366; color: white; padding: 12px; text-decoration: none; border-radius: 8px; display: block; font-weight: bold; transition: 0.3s; margin-top: 10px; }
-        .btn-wa:hover { background: #128c7e; }
-        footer { text-align: center; padding: 20px; color: #777; font-size: 0.9em; }
+        :root { --primary-green: #1b5e20; --accent-gold: #c5a059; --light-bg: #f8f9fa; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: var(--light-bg); color: #333; }
+        
+        /* Navbar Section */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary-green); }
+        .logo span { color: var(--accent-gold); }
+        .nav-links { list-style: none; display: flex; gap: 20px; }
+        .nav-links a { text-decoration: none; color: #444; font-weight: 500; font-size: 14px; }
+
+        /* Hero Section */
+        .hero { background: white; padding: 40px 20px; text-align: center; }
+        
+        /* Cards Container */
+        .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 40px 5%; max-width: 1200px; margin: auto; }
+        
+        /* Professional Card Style */
+        .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #eee; }
+        .card:hover { transform: translateY(-10px); }
+        .card-icon { background: var(--primary-green); padding: 40px; text-align: center; color: white; font-size: 60px; position: relative; }
+        .badge { position: absolute; top: 15px; left: 15px; background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 10px; color: white; border: 1px solid rgba(255,255,255,0.3); }
+        
+        .card-body { padding: 25px; text-align: left; }
+        .card-body h3 { margin: 0 0 10px 0; font-size: 22px; color: #111; }
+        .card-body p { color: #6c757d; font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
+        
+        /* Details List (Grade, Kgs, etc.) */
+        .details-list { margin: 15px 0; padding: 0; list-style: none; }
+        .details-list li { font-size: 13px; color: #555; margin-bottom: 8px; display: flex; align-items: center; }
+        .details-list li::before { content: '✓'; color: var(--accent-gold); font-weight: bold; margin-right: 10px; }
+
+        .btn-wa { background: var(--primary-green); color: white; padding: 12px; text-decoration: none; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; gap: 8px; transition: 0.3s; }
+        .btn-wa:hover { background: #128c7e; opacity: 0.9; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>ZS GLOBAL FZE</h1>
-    <p>Wholesale Suppliers of Used Clothing, Shoes & More</p>
-</header>
-
-<div class="hero">
-    <h2>Sharjah Warehouse Stock</h2>
-    <p>Premium Quality | Bulk Export | Ready for Local Delivery</p>
-</div>
+<nav>
+    <div class="logo">ZS <span>GLOBAL</span></div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Process</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 
 <div class="container">
     <div class="card">
-        <div class="card-header">👕</div>
-        <div class="card-content">
+        <div class="card-icon"><span class="badge">Best Seller</span>👕</div>
+        <div class="card-body">
             <h3>Used Clothing</h3>
-            <p>Mixed summer and winter clothing, carefully sorted by grade (A/B/C available).</p>
-            <a href="https://wa.me/97155214798?text=I%20want%20to%20order%20Used%20Clothing" class="btn-wa">Inquire Now</a>
+            <p>Mixed summer and winter clothing, carefully sorted by grade. Includes shirts, pants, dresses, and traditional wear.</p>
+            <ul class="details-list">
+                <li>Grade A/B/C available</li>
+                <li>45kg bales</li>
+                <li>Mixed gender & age</li>
+            </ul>
+            <a href="https://wa.me/971552214798?text=I%20am%20interested%20in%20Used%20Clothing%20Stock" class="btn-wa">💬 Inquire Now</a>
         </div>
     </div>
 
     <div class="card">
-        <div class="card-header">👟</div>
-        <div class="card-content">
+        <div class="card-icon"><span class="badge">High Demand</span>👟</div>
+        <div class="card-body">
             <h3>Used Shoes</h3>
-            <p>Quality second-hand footwear including sports shoes, formal, and sandals.</p>
-            <a href="https://wa.me/971552214798?text=I%20want%20to%20order%20Used%20Shoes" class="btn-wa">Inquire Now</a>
+            <p>Quality second-hand footwear including sports shoes, formal shoes, sandals, and boots for all ages.</p>
+            <ul class="details-list">
+                <li>Paired and tied</li>
+                <li>Cleaned & sanitized</li>
+                <li>25kg sacks</li>
+            </ul>
+            <a href="https://wa.me/971552214798?text=I%20am%20interested%20in%20Used%20Shoes%20Stock" class="btn-wa">💬 Inquire Now</a>
         </div>
     </div>
 
     <div class="card">
-        <div class="card-header">🤖</div>
-        <div class="card-content">
+        <div class="card-icon"><span class="badge">Popular</span>🤖</div>
+        <div class="card-body">
             <h3>Used Toys</h3>
-            <p>Mixed toys including soft toys and educational items in working condition.</p>
-            <a href="https://wa.me/971552214798?text=I%20want%20to%20order%20Used%20Toys" class="btn-wa">Inquire Now</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-header">👜</div>
-        <div class="card-content">
-            <h3>Handbags & Belts</h3>
-            <p>Fashion accessories in good condition, mixed brands and styles.</p>
-            <a href="https://wa.me/971552214798?text=I%20want%20to%20order%20Handbags%20and%20Belts" class="btn-wa">Inquire Now</a>
+            <p>Mixed toys including soft toys, electronic toys, educational toys, and plastic toys in working condition.</p>
+            <ul class="details-list">
+                <li>Safety checked</li>
+                <li>Mixed categories</li>
+                <li>10kg cartons</li>
+            </ul>
+            <a href="https://wa.me/971552214798?text=I%20am%20interested%20in%20Used%20Toys%20Stock" class="btn-wa">💬 Inquire Now</a>
         </div>
     </div>
 </div>
 
-<footer>
-    <p>© 2026 ZS GLOBAL FZE - Sharjah, UAE</p>
+<footer style="text-align: center; padding: 40px; color: #aaa; font-size: 12px;">
+    © 2026 ZS GLOBAL FZE - Sharjah, UAE
 </footer>
 
 </body>
