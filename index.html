@@ -7,39 +7,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root { --primary-green: #2e7d32; --dark-green: #1b5e20; --accent-gold: #c5a059; --bg-gray: #f4f7f6; }
-        body { font-family: 'Poppins', sans-serif; margin: 0; background-color: var(--bg-gray); color: #333; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background-color: var(--bg-gray); }
         
-        /* Navbar */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 8%; background: white; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
-        .logo { display: flex; align-items: center; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 22px; color: var(--dark-green); }
-        .logo span { color: var(--accent-gold); margin-left: 5px; }
-        .nav-links { display: flex; gap: 25px; list-style: none; margin: 0; }
-        .nav-links a { text-decoration: none; color: #444; font-size: 14px; font-weight: 500; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary-green); }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 24px; color: var(--dark-green); }
+        .logo span { color: var(--accent-gold); }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { text-decoration: none; color: #333; font-size: 14px; font-weight: 500; }
 
-        /* Grid Container */
-        .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; padding: 50px 8%; max-width: 1300px; margin: auto; }
+        .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 40px 8%; max-width: 1200px; margin: auto; }
 
-        /* Card Design */
-        .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid #efefef; transition: transform 0.3s ease; display: flex; flex-direction: column; }
-        .card:hover { transform: translateY(-10px); }
-        .card-header { background: var(--primary-green); padding: 50px 20px; text-align: center; color: white; font-size: 70px; }
+        .card { background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: 0.3s; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-5px); }
         
-        .card-body { padding: 30px; flex-grow: 1; text-align: left; }
-        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-bottom: 15px; background: #e8f5e9; color: var(--primary-green); border: 1px solid #c8e6c9; }
-        .card h3 { margin: 0 0 12px 0; font-size: 24px; font-family: 'Montserrat', sans-serif; font-weight: 700; color: #1a1a1a; }
-        .card p { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 20px; height: 70px; overflow: hidden; }
+        /* Icon Section */
+        .card-img { background: var(--primary-green); height: 180px; display: flex; align-items: center; justify-content: center; font-size: 70px; color: white; }
         
-        /* Details List */
-        .details { list-style: none; padding: 0; margin-bottom: 25px; }
-        .details li { font-size: 13px; color: #555; margin-bottom: 10px; display: flex; align-items: center; }
-        .details li::before { content: '✓'; color: var(--accent-gold); font-weight: bold; margin-right: 12px; }
+        .card-content { padding: 25px; flex-grow: 1; }
+        .tag { background: #e8f5e9; color: var(--primary-green); font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; margin-bottom: 15px; display: inline-block; }
+        
+        .card h3 { font-family: 'Montserrat', sans-serif; margin: 0 0 10px 0; font-size: 22px; color: #111; }
+        .card p { font-size: 14px; color: #666; margin-bottom: 20px; line-height: 1.5; min-height: 63px; }
+        
+        .features { list-style: none; padding: 0; margin: 0 0 25px 0; }
+        .features li { font-size: 13px; color: #444; margin-bottom: 8px; display: flex; align-items: center; }
+        .features li::before { content: '✓'; color: var(--accent-gold); margin-right: 10px; font-weight: bold; }
 
-        /* WhatsApp Button */
-        .btn-wa { background: var(--dark-green); color: white; padding: 15px; text-decoration: none; border-radius: 12px; text-align: center; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.3s; margin-top: auto; }
-        .btn-wa:hover { background: #25d366; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3); }
-
-        footer { text-align: center; padding: 40px; background: #fff; color: #999; font-size: 13px; border-top: 1px solid #eee; }
+        .btn-inquire { background: var(--dark-green); color: white; text-align: center; padding: 14px; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 15px; transition: 0.3s; }
+        .btn-inquire:hover { background: #25d366; }
+        
+        footer { text-align: center; padding: 30px; color: #888; font-size: 13px; }
     </style>
 </head>
 <body>
@@ -57,63 +54,73 @@
 
 <div class="container">
     <div class="card">
-        <div class="card-header">👕</div>
-        <div class="card-body">
-            <span class="badge">Best Seller</span>
+        <div class="card-img">👕</div>
+        <div class="card-content">
+            <span class="tag">Best Seller</span>
             <h3>Used Clothing</h3>
-            <p>Mixed summer and winter clothing, carefully sorted by grade. Includes shirts, pants, and dresses.</p>
-            <ul class="details">
-                <li>Grade A/B/C available</li>
-                <li>45kg bales</li>
-                <li>Mixed gender & age</li>
-            </ul>
-            <a href="https://wa.me/971552214798?text=Inquiry:%20Used%20Clothing" class="btn-wa">Inquire Now</a>
+            <p>Mixed summer and winter clothing, sorted by grade for export markets.</p>
+            <ul class="features"><li>Grade A/B/C available</li><li>45kg bales</li><li>Mixed gender</li></ul>
+            <a href="https://wa.me/971552214798" class="btn-inquire">Inquire Now</a>
         </div>
     </div>
 
     <div class="card">
-        <div class="card-header">👟</div>
-        <div class="card-body">
-            <span class="badge">High Demand</span>
+        <div class="card-img">👞</div>
+        <div class="card-content">
+            <span class="tag">High Demand</span>
             <h3>Used Shoes</h3>
-            <p>Premium paired shoes including sports, formal, and casual wear for international markets.</p>
-            <ul class="details">
-                <li>Paired and tied</li>
-                <li>Cleaned & sanitized</li>
-                <li>25kg sacks</li>
-            </ul>
-            <a href="https://wa.me/971552214798?text=Inquiry:%20Used%20Shoes" class="btn-wa">Inquire Now</a>
+            <p>Quality second-hand footwear including sports, formal, and sandals.</p>
+            <ul class="features"><li>Paired and tied</li><li>Cleaned & sanitized</li><li>25kg sacks</li></ul>
+            <a href="https://wa.me/971552214798" class="btn-inquire">Inquire Now</a>
         </div>
     </div>
 
     <div class="card">
-        <div class="card-header">🤖</div>
-        <div class="card-body">
-            <span class="badge">Popular</span>
+        <div class="card-img">🤖</div>
+        <div class="card-content">
+            <span class="tag">Popular</span>
             <h3>Used Toys</h3>
-            <p>Mixed plastic and soft toys, all safety checked and in excellent working condition.</p>
-            <ul class="details">
-                <li>Safety checked</li>
-                <li>Mixed categories</li>
-                <li>10kg cartons</li>
-            </ul>
-            <a href="https://wa.me/971552214798?text=Inquiry:%20Used%20Toys" class="btn-wa">Inquire Now</a>
+            <p>Mixed toys including soft toys, electronic, and educational items.</p>
+            <ul class="features"><li>Safety checked</li><li>Mixed categories</li><li>10kg cartons</li></ul>
+            <a href="https://wa.me/971552214798" class="btn-inquire">Inquire Now</a>
         </div>
     </div>
 
     <div class="card">
-        <div class="card-header">👜</div>
-        <div class="card-body">
-            <span class="badge">Premium</span>
+        <div class="card-img">👜</div>
+        <div class="card-content">
+            <span class="tag">Premium</span>
             <h3>Handbags & Belts</h3>
-            <p>Fashion accessories including purses, wallets, and leather belts in top grade condition.</p>
-            <ul class="details">
-                <li>Genuine & synthetic leather</li>
-                <li>Mixed brands</li>
-                <li>Carefully packed</li>
-            </ul>
-            <a href="https://wa.me/971552214798?text=Inquiry:%20Handbags%20and%20Belts" class="btn-wa">Inquire Now</a>
+            <p>Fashion accessories including ladies purses and leather belts in top grade.</p>
+            <ul class="features"><li>Genuine & synthetic</li><li>Mixed brands</li><li>Carefully packed</li></ul>
+            <a href="https://wa.me/971552214798" class="btn-inquire">Inquire Now</a>
         </div>
     </div>
 
     <div class="card">
+        <div class="card-img">🍽️</div>
+        <div class="card-content">
+            <span class="tag">Kitchen</span>
+            <h3>Used Crockery</h3>
+            <p>Kitchenware including plates, cups, and cutlery sets for household use.</p>
+            <ul class="features"><li>Ceramic & glass</li><li>Complete sets</li><li>Bubble wrapped</li></ul>
+            <a href="https://wa.me/971552214798" class="btn-inquire">Inquire Now</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-img">💎</div>
+        <div class="card-content">
+            <span class="tag">Rare Collection</span>
+            <h3>Vintage & Jewelry</h3>
+            <p>Special collection of vintage items and unique collectible pieces.</p>
+            <ul class="features"><li>Handpicked items</li><li>Authentic vintage</li><li>Limited stock</li></ul>
+            <a href="https://wa.me/971552214798" class="btn-inquire">Inquire Now</a>
+        </div>
+    </div>
+</div>
+
+<footer>© 2026 ZS GLOBAL FZE - Sharjah, UAE</footer>
+
+</body>
+</html>
